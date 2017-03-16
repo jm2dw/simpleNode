@@ -7,9 +7,9 @@ app.set('view engine', 'ejs');
 
 // use res.render to load up an ejs view file
 var connection = mysql.createConnection({
-    host: '206.12.96.242',
-    user: 'group0',
-    password: 'untanglingGroup0',
+    host: '159.203.42.111',
+    user: 'group2',
+    password: 'untanglingGroup2',
     database: 'testDB'
 });
 connection.connect();
