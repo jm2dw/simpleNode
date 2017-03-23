@@ -19,7 +19,7 @@ var campdetail;
 connection.query('SELECT * FROM test4.CAMPDETAIL;, function(err, rows, fields) {
     if (err) throw err;
 
-    camp = rows;
+    campdetail = rows;
     console.log(rows[0]);
 });
 
