@@ -1,25 +1,25 @@
 var express = require('express');
-var mysql = require('mysql');
+var mysql = require('mysql'); 
 var app = express();
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
 // use res.render to load up an ejs view file
-var connection = mysql.createConnection({
-    host: '159.203.42.111',
+var connection = mysql.createConnection({  //part of my sequal package
+    host: '206.12.96.242',
     user: 'group2',
     password: 'untanglingGroup2',
-    database: 'testDB'
+    database: 'test4'
 });
 connection.connect();
 
 var employees;
 
-connection.query('SELECT * FROM employees', function(err, rows, fields) {
+connection.query('SELECT * FROM camp', function(err, rows, fields) {
     if (err) throw err;
 
-    employees = rows;
+    camp = rows;
     console.log(rows[0]);
 });
 
@@ -45,6 +45,6 @@ app.get('/about', function(req, res) {
     });
 });
 
-app.listen(8000, function() {
+app.listen(3306, function() {
     console.log('Example app listening on port 8000!')
 })
