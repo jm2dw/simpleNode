@@ -16,7 +16,7 @@ connection.connect();
 
 var employees;
 
-connection.query('SELECT * FROM employees', function(err, rows, fields) {
+connection.query('SELECT * FROM employees where salary >30000', function(err, rows, fields) {
     if (err) throw err;
 
     employees = rows;
@@ -28,7 +28,7 @@ connection.end();
 app.get('/', function(req, res) {
 
 
-    res.render('simple1', { employees: employees })
+    res.render('test', { employees: employees })
 })
 
 // about page 
