@@ -45,6 +45,6 @@ app.get('/about', function(req, res) {
     });
 });
 
-app.listen(3306, function() {
+app.listen(8002, function() {
     console.log('Example app listening on port 8000!')
 })
