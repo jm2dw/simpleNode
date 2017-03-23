@@ -14,9 +14,9 @@ var connection = mysql.createConnection({  //part of my sequal package
 });
 connection.connect();
 
-var employees;
+var campdetail;
 
-connection.query('SELECT * FROM camp', function(err, rows, fields) {
+connection.query('SELECT * FROM test4.CAMPDETAIL;, function(err, rows, fields) {
     if (err) throw err;
 
     camp = rows;
@@ -28,7 +28,7 @@ connection.end();
 app.get('/', function(req, res) {
 
 
-    res.render('simple1', { employees: employees })
+    res.render('simple1', { campdetail: campdetail })
 })
 
 // about page 
@@ -45,6 +45,6 @@ app.get('/about', function(req, res) {
     });
 });
 
-app.listen(3306, function() {
+app.listen(8002, function() {
     console.log('Example app listening on port 8000!')
 })
